@@ -1,5 +1,5 @@
 $(document).ready(function()
-{ 
+{
   var config = {
     pixel_size: 5,
     default_color: '#5D5D5D',

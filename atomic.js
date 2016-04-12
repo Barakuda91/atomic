@@ -1,5 +1,4 @@
 (function( window, undefined ) {
-
   function g(config)
   {
   /*---CONFIG---*/
@@ -26,7 +25,7 @@
       type = type || 0;
       if(this.config.debug && typeof text == 'string') console.log(types[type]+': '+text);
       if(this.config.debug && typeof text == 'object') console.log(text);
-    }; 
+    };
     this.get_position = function(e)
     {
       var rect = this.canvas_element.getBoundingClientRect();

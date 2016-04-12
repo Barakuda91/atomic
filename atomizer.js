@@ -1,5 +1,5 @@
 (function( window, undefined ) {
- 
+
   function g(atomic)
   {
 
