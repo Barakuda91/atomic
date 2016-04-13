@@ -1,5 +1,5 @@
 (function( window, undefined ) {
-  function g(config)
+  window.Atomic = function  (config)
   {
   /*---CONFIG---*/
     var _this   = this;
@@ -8,13 +8,23 @@
     this.config.default_color = config.default_color  || '#fff';
     this.config.debug         = config.debug          || false;
 
-
-
+    this.global_bloks = {
+      map: {
+        0: {name: 'empty', color: '#E4E4E4', walking: 1, strength: 0},
+        1: {name: 'ground', color: '#582B02', walking: 1, strength: 0},
+        2: {name: 'rock', color: '#848484', walking: 0, strength: 6},
+        3: {name: 'glass', color: '#289000', walking: 1, strength: 0},
+      },
+      entity: {
+        0: ''
+      }
+    }
     this.canvas_element = document.getElementById("canvas");
     this.canvas = this.canvas_element.getContext("2d");
 
-    this.click = false;
-
+    this.key_press = {
+      ctrl: false
+    }
   /*----functions_privat----*/
 /*--------------------------------------------------------------------------------------------------------------------
     * логирование проекта
@@ -65,6 +75,7 @@
         this.config.pixel_size
       );
       c.fillStyle = this.config.default_color;
+      $('.cont').append('['+x+','+y+',"'+color+'"],');
     };
 
 /*--------------------------------------------------------------------------------------------------------------------
@@ -79,9 +90,6 @@
         _this.d_pixel(el, color);
       });
     };
-  /*----function_public-----*/
     this.test = 3;
   }
-
-  window.Atomic = g;
 })(window);

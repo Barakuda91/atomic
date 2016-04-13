@@ -1,0 +1,1 @@
+2016/04/13 13:13:10 [error] 12124#0: *168 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 127.0.0.1, server: atomic.com, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "atomic.com", referrer: "http://atomic.com/"

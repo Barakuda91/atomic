@@ -5,14 +5,34 @@
   </head>
   <body>
     <h3>CANVAS TEST</h3>
-    <canvas id="canvas" width="900" height="900"></canvas>
+    <table>
+      <tr>
+        <td>
+          <input type="submit" value="Добавить блок"><br />
+          <input type="range" min="0" max="10" step="1" value="1">  кол-во пикселей
+        </td>
+        <td>
+          <h5>блоки</h5>
+
+            <input class="change_block" type="submit" data-block="1" value="стена">
+            <input class="change_block" type="submit" data-block="2" value="камень">
+            <input class="change_block" type="submit" data-block="0" value="вода">
+        </td>
+      </tr>
+      <tr>
+        <td width="900px">
+          <canvas id="canvas" width="900" height="900"></canvas>
+        </td>
+        <td>
+          <div class="cont"></div>
+        </td>
+      </tr>
+    </table>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="atomic.js"></script>
     <script type="text/javascript" src="atomizer.js"></script>
     <script type="text/javascript" src="index.js"></script>
-
-    <div class="cont"></div>
 
 
 
