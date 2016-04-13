@@ -8,6 +8,9 @@
     this.config.default_color = config.default_color  || '#fff';
     this.config.debug         = config.debug          || false;
 
+    this.pain_blok = 1;
+
+
     this.global_bloks = {
       map: {
         0: {name: 'empty', color: '#E4E4E4', walking: 1, strength: 0},
@@ -71,9 +74,10 @@
       c.fillRect(
         x*this.config.pixel_size,
         y*this.config.pixel_size,
-        this.config.pixel_size,
-        this.config.pixel_size
+        (this.config.pixel_size*this.pain_blok),
+        (this.config.pixel_size*this.pain_blok)
       );
+
       c.fillStyle = this.config.default_color;
       $('.cont').append('['+x+','+y+',"'+color+'"],');
     };

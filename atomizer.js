@@ -24,6 +24,7 @@
       document.body.addEventListener('keydown', this.keydown);
       document.body.addEventListener('keyup', this.keyup);
       $('.change_block').click(this.change_block);
+      $('#pain_blok').change(this.change_pain_blok);
 
       atomic.logir('Atomizer Start');
       return this;
@@ -79,6 +80,10 @@
     this.change_block = function()
     {
       _this.current_block = $(this).data('block');
+    }
+    this.change_pain_blok = function()
+    {
+      atomic.pain_blok = $(this).val();
     }
   }
 
