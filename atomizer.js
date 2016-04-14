@@ -21,9 +21,19 @@
       atomic.canvas_element.addEventListener('mouseup', this.mouseup);
       atomic.canvas_element.addEventListener('mousemove', this.mousemove);
 
-      document.body.addEventListener('keydown', this.keydown);
-      document.body.addEventListener('keyup', this.keyup);
+      $('#blocks').draggable({
+        containment:'parent',
+        cursor: 'pointer',
+        handle: '.dragTyre'
+      });
+      $('#blocks .hide').click(function()
+      {
+        $('#blocks .body').toggle();
+      });
+      $('body').on('keydown', this.keydown);
+      $('body').on('keyup', this.keyup);
       $('.change_block').click(this.change_block);
+      $('#pain_blok').change(this.change_pain_blok);
 
       atomic.logir('Atomizer Start');
       return this;
@@ -79,6 +89,10 @@
     this.change_block = function()
     {
       _this.current_block = $(this).data('block');
+    }
+    this.change_pain_blok = function()
+    {
+      atomic.pain_blok = $(this).val();
     }
   }
 

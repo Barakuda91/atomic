@@ -7,6 +7,11 @@
     this.config.pixel_size    = config.pixel_size     || 5;
     this.config.default_color = config.default_color  || '#fff';
     this.config.debug         = config.debug          || false;
+    this.config.canvas_height = (config.canvas_height !== 'max' && typeof config.canvas_height == 'number') ? config.canvas_height : window.innerWidth;
+    this.config.canvas_width  = (config.canvas_width !== 'max' && typeof config.canvas_width == 'number') ? config.canvas_width : window.innerHeight;
+
+    this.pain_blok = 1;
+
 
     this.global_bloks = {
       map: {
@@ -47,6 +52,16 @@
     };
     this.init = function()
     {
+      changeSize();
+      function changeSize()
+      {
+        var canvas = document.getElementById("canvas");
+        if(canvas)
+        {
+                canvas.width=document.body.clientWidth;
+                canvas.height=document.body.clientHeight;
+        }
+      }
       this.logir('Atomic Start');
       return this;
     };
@@ -71,9 +86,10 @@
       c.fillRect(
         x*this.config.pixel_size,
         y*this.config.pixel_size,
-        this.config.pixel_size,
-        this.config.pixel_size
+        (this.config.pixel_size*this.pain_blok),
+        (this.config.pixel_size*this.pain_blok)
       );
+
       c.fillStyle = this.config.default_color;
       $('.cont').append('['+x+','+y+',"'+color+'"],');
     };
