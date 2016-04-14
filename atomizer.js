@@ -28,7 +28,7 @@
       });
       $('#blocks .hide, #infos .hide').click(function()
       {
-        $(this).parent().parent().find('.body').toggle();
+        $(this).closest('.removable').find('.body').toggle();
       });
 
       $('body').on('keydown', this.keydown);

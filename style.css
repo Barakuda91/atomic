@@ -7,8 +7,8 @@ body, html, canvas{
 }
 .removable{
   position:fixed;
-  border: 1px solid red;
-  border-radius: 5px;
+  border: 2px solid red;
+  border-radius: 2px;
   background: black;
   color: silver;
   width: 150px;
@@ -36,12 +36,12 @@ body, html, canvas{
 }
 .removable .link{
   cursor: pointer;
-  font-size: 12px;
-  border-bottom: 1px solid gray;
+  font-size: 15px;
+  border-bottom: 1px solid #840713;
 }
 .removable .link:hover{
-  border-bottom: 1px solid red;
-  color: white;
+  border-bottom: 1px solid #95C228;
+  color: #95C228;
 }
 .removable .linkBlock{
   padding: 2px 10px;
