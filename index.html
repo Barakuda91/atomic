@@ -4,7 +4,7 @@
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h3>CANVAS TEST</h3>
+    <!-- <h3>CANVAS TEST</h3>
     <table>
       <tr>
         <td>
@@ -21,15 +21,30 @@
       </tr>
       <tr>
         <td width="900px">
-          <canvas id="canvas" width="900" height="900"></canvas>
         </td>
         <td>
           <div class="cont"></div>
         </td>
       </tr>
-    </table>
-
+    </table> -->
+    <div id="blocks" class="removable">
+      <div class="navigation">Tools
+        <div class="hide">[-]</div>
+        <div class="dragTyre">[o]</div>
+      </div>
+      <div class="body">
+        <div class="headLine">Bloks</div>
+        <div class="change_block" data-block="0">Wall</div>
+        <div class="change_block" data-block="1">Rock</div>
+        <div class="change_block" data-block="2">Water</div>
+        <div class="headLine">Size</div>
+        <input id="pain_blok" type="range" min="1" max="10" step="1" value="1">
+      </div>
+    </div>
+    <canvas id='canvas'></canvas>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="atomic.js"></script>
     <script type="text/javascript" src="atomizer.js"></script>
     <script type="text/javascript" src="index.js"></script>
