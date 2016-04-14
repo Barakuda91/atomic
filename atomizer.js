@@ -21,15 +21,16 @@
       atomic.canvas_element.addEventListener('mouseup', this.mouseup);
       atomic.canvas_element.addEventListener('mousemove', this.mousemove);
 
-      $('#blocks').draggable({
+      $('#blocks, #infos').draggable({
         containment:'parent',
         cursor: 'pointer',
-        handle: '.dragTyre'
+        handle: '.navigation'
       });
-      $('#blocks .hide').click(function()
+      $('#blocks .hide, #infos .hide').click(function()
       {
-        $('#blocks .body').toggle();
+        $(this).parent().parent().find('.body').toggle();
       });
+
       $('body').on('keydown', this.keydown);
       $('body').on('keyup', this.keyup);
       $('.change_block').click(this.change_block);

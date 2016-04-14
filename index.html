@@ -4,52 +4,63 @@
     <link type="text/css" rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- <h3>CANVAS TEST</h3>
-    <table>
-      <tr>
-        <td>
-          <input type="submit" value="Добавить блок"><br />
-          <input id="pain_blok" type="range" min="1" max="10" step="1" value="1">  кол-во пикселей
-        </td>
-        <td>
-          <h5>блоки</h5>
-
-            <input class="change_block" type="submit" data-block="1" value="стена">
-            <input class="change_block" type="submit" data-block="2" value="камень">
-            <input class="change_block" type="submit" data-block="0" value="вода">
-        </td>
-      </tr>
-      <tr>
-        <td width="900px">
-        </td>
-        <td>
-          <div class="cont"></div>
-        </td>
-      </tr>
-    </table> -->
     <div id="blocks" class="removable">
-      <div class="navigation">Tools
+      <div class="navigation">
+        Tools
         <div class="hide">[-]</div>
-        <div class="dragTyre">[o]</div>
       </div>
       <div class="body">
+
         <div class="headLine">Bloks</div>
-        <div class="change_block" data-block="0">Wall</div>
-        <div class="change_block" data-block="1">Rock</div>
-        <div class="change_block" data-block="2">Water</div>
+        <div class="linkBlock">
+          <div class="change_block link" data-block="0">Wall</div>
+          <div class="change_block link" data-block="1">Rock</div>
+          <div class="change_block link" data-block="2">Water</div>
+        </div>
+
         <div class="headLine">Size</div>
-        <input id="pain_blok" type="range" min="1" max="10" step="1" value="1">
+        <div class="linkBlock">
+          <input id="pain_blok" type="range" min="1" max="10" step="1" value="1">
+        </div>
+
+
+        <div class="headLine">Game Area</div>
+        <div class="linkBlock">
+          <div class="link">Clean Plaine</div>
+          <div class="link">Save</div>
+          <div class="link">Open New</div>
+        </div>
+
+        <div class="headLine">Other</div>
+        <div class="linkBlock">
+          <div class="link">Game</div>
+          <div class="link">Map Editor</div>
+          <div class="link">Building Editor</div>
+        </div>
+
       </div>
     </div>
+
+    <div id="infos" class="removable">
+      <div class="navigation">
+        Tools
+        <div class="hide">[-]</div>
+      </div>
+      <div class="body">
+        body
+      </div>
+    </div>
+
+
+
+
+
     <canvas id='canvas'></canvas>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="atomic.js"></script>
-    <script type="text/javascript" src="atomizer.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-
-
-
+    <script src="atomic.js"></script>
+    <script src="atomizer.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

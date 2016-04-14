@@ -11,39 +11,51 @@ body, html, canvas{
   border-radius: 5px;
   background: black;
   color: silver;
-  padding: 2px 10px;
   width: 150px;
-  left: 20px;
-  top: 20px;
 }
 .removable .navigation{
   font-size: 10px;
+  border-bottom: 1px solid silver;
+  background: #4F4F4F;
 }
 .removable .dragTyre, .removable .hide{
   position: relative;
   padding: 2px;
   color: red;
   cursor: pointer;
-  left: 100px;
+  left: 90px;
   background: #3C3C3C;
   display: inline-block;
 }
 .removable .headLine{
   text-align: center;
+  border-bottom: 1px solid silver;
+  background: #4F4F4F;
   color: lime;
   font-size: 15px;
 }
-.removable .change_block{
+.removable .link{
   cursor: pointer;
   font-size: 12px;
   border-bottom: 1px solid gray;
 }
-.removable .change_block:hover{
+.removable .link:hover{
   border-bottom: 1px solid red;
   color: white;
+}
+.removable .linkBlock{
+  padding: 2px 10px;
 }
 #canvas {
   image-rendering: optimizeSpeed;
   -webkit-interpolation-mode: nearest-neighbor;
   cursor: crosshair;
+}
+#blocks{
+  left: 20px;
+  top: 20px;
+}
+#infos{
+  right: 20px;
+  top: 20px;
 }
